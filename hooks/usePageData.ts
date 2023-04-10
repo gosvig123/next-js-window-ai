@@ -16,6 +16,7 @@ export const usePageData = () => {
     if (response.ok) {
       const data = await response.json();
       setPageData(data.data);
+      return data.data;
     } else {
       console.error("Error:", response);
     }
